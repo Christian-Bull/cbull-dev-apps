@@ -12,7 +12,7 @@ spec:
     path: manifests
     repoURL: 'https://github.com/Christian-Bull/catfacts'
     targetRevision: HEAD
-  project: cbull-dev
+  project: cbull
   syncPolicy:
     automated:
       prune: true
