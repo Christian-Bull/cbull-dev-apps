@@ -15,5 +15,5 @@ spec:
   project: 'cbull-dev'
   syncPolicy:
     automated:
-      prune: false
-      selfHeal: false
+      prune: truen
+      selfHeal: true
