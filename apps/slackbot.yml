@@ -15,6 +15,7 @@ spec:
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: slack-twitch-slash
+  project: cbull
   syncPolicy:
     automated:
       prune: true
