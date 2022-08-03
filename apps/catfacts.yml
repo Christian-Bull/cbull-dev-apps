@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: 'catfacts'
-  namespace: 'catfacts'
+  name: catfacts
+  namespace: argocd
 spec:
   destination:
-    name: 'catfacts'
-    namespace: 'catfacts'
+    name: catfacts
+    namespace: catfacts
     server: 'https://kubernetes.default.svc'
   source:
-    path: 'manifests'
+    path: manifests
     repoURL: 'https://github.com/Christian-Bull/catfacts'
     targetRevision: HEAD
-  project: 'cbull-dev'
+  project: cbull-dev
   syncPolicy:
     automated:
       prune: true
