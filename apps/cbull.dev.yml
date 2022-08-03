@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: catfacts
+  namespace: argocd
+spec:
+  destination:
+    namespace: cbull-dev
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: manifests
+    repoURL: https://github.com/Christian-Bull/cbull-dev-infra
+    targetRevision: HEAD
+  project: cbull
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
