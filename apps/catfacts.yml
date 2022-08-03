@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'catfacts'
+spec:
+  destination:
+    name: 'catfacts'
+    namespace: 'catfacts'
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: 'manifests'
+    repoURL: 'https://github.com/Christian-Bull/catfacts'
+    targetRevision: HEAD
+  project: 'cbull-dev'
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
