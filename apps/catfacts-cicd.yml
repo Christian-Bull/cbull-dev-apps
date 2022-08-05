@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: catfacts-ci
+  namespace: argocd
+spec:
+  destination:
+    namespace: catfacts-cicd
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ci/tekton
+    repoURL: 'https://github.com/Christian-Bull/catfacts'
+    targetRevision: HEAD
+  project: cbull
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
