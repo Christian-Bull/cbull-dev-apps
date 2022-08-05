@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: catfacts-ci
+  name: catfacts-cicd
   namespace: argocd
 spec:
   destination:
