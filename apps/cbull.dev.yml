@@ -5,7 +5,7 @@ metadata:
   namespace: argocd-cbull
 spec:
   destination:
-    namespace: cbull-dev
+    namespace: cbull
     server: 'https://kubernetes.default.svc'
   source:
     path: manifests
