@@ -2,7 +2,7 @@
 # kind: Application
 # metadata:
 #   name: slackbot
-#   namespace: argocd
+#   namespace: argocd-cbull
 # spec:
 #   source:
 #     repoURL: 'https://github.com/Christian-Bull/slack-twitch-slash.git'

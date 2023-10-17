@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: catfacts
-  namespace: argocd
+  namespace: argocd-cbull
 spec:
   destination:
     namespace: catfacts
