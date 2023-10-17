@@ -1,24 +1,24 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: slackbot
-  namespace: argocd
-spec:
-  source:
-    repoURL: 'https://github.com/Christian-Bull/slack-twitch-slash.git'
-    path: charts/slack-twitch-slash
-    targetRevision: main
-    helm:
-      parameters:
-        - name: global.ingress_domain
-          value: api.cbull.dev
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: slack-twitch-slash
-  project: cbull
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: slackbot
+#   namespace: argocd
+# spec:
+#   source:
+#     repoURL: 'https://github.com/Christian-Bull/slack-twitch-slash.git'
+#     path: charts/slack-twitch-slash
+#     targetRevision: main
+#     helm:
+#       parameters:
+#         - name: global.ingress_domain
+#           value: api.cbull.dev
+#   destination:
+#     server: 'https://kubernetes.default.svc'
+#     namespace: slack-twitch-slash
+#   project: cbull
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=true
